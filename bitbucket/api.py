@@ -242,6 +242,10 @@ class Issue(object):
         url = self.base_url + 'followers/'
         return json.loads(self.bb.load_url(url))
 
+    def comments(self):
+        url = self.base_url + 'comments/'
+        return json.loads(self.bb.load_url(url))
+
     def __repr__(self):
         return '<Issue #%s on %s\'s %s>' % (self.number, self.username, self.slug)
 
